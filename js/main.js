@@ -1,29 +1,29 @@
  jQuery(document).ready(function(){
-     
+
    "use strict"
     $('.slider').ripples({
       dropRadius: 11,
       perturbance: 0.01,
-       
+
     });
-  
+
      $(".text").typed({
-        strings:["<strong>i love</strong><strong class='primary'> codings.</strong>","<strong>and to</strong><strong class='primary'> share !!.</strong>"],
+        strings:["<strong>We make awesome</strong><strong class='primary'> websites.</strong>","<strong>according to</strong><strong class='primary'>your needs.</strong>"],
          typespeed:0,
          loop:true
-         
+
      });
-     
+
     $(window).scroll(function(){
-        
+
        var top = $(window).scrollTop();
         if(top>=60){
-          $("nav").addClass('secondary'); 
+          $("nav").addClass('secondary');
         }
-        
-        else 
+
+        else
             if($("nav").hasClass('secondary')){
-                $("nav").removeClass('secondary'); 
+                $("nav").removeClass('secondary');
             }
     });
 
@@ -32,10 +32,10 @@
       type: 'image',
       gallery: {
       enabled: true
-       } 
-                               
+       }
+
     });
-     
+
       $("#team-members").owlCarousel({
           items:3,
           autoplay:true,
@@ -44,32 +44,32 @@
           autoplayHoverPause:true,
             responsive:{
               0:{
-          
+
                  items:1
-              }, 
+              },
              480:{
-          
+
                  items:2
-              }, 
-                                     
+              },
+
              768:{
-          
+
                  items:3
-              } 
+              }
             }
-          
-          
-          
+
+
+
       });
      $('.counter').counterUp({
                 delay: 10,
                 time: 4000
             });
-     
+
       $("a.smooth-scroll").click(function (event) {
 
         event.preventDefault();
-        
+
         var section = $(this).attr("href");
 
         $('html, body').animate({
@@ -77,5 +77,5 @@
         }, 1250, "easeInOutExpo");
     });
      new WOW().init();
-     
+
  });
